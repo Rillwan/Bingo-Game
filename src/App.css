@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+:root {
+    --white: rgb(255, 255, 255);
+    --black: rgb(0, 0, 0);
+    --light: rgb(240, 255, 222);
+    --green: rgb(190, 234, 106);
+    --blue: rgb(96, 163, 186);
+    --smooth-green: rgba(157, 195, 86, 0.789);
+    --dark-green: rgb(48, 69, 8);
+
+    --box-light-under-shadow: 0 0 5px var(--dark-green);
+    --box-dark-under-shadow: 0 0 6px var(--green);
+    --shadow-dark: rgba(48, 69, 8, 0.16);
+    --shadow-light: rgba(189, 234, 106, 0.296);
+
+    --transition: all 400ms ease;
+
+    --theme-light: rgb(240, 255, 222);
+    --theme-dark: rgb(48, 69, 8);
+
+    --btn-box-shadow: 0px 4px 15px 3px var(--shadow-dark);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* ========= ============ */
+.App .container {
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.row {
+    display: grid;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+/* =================  */
+.App table {
+    border-collapse: collapse;
+    border: 5px solid var(--dark-green);
+    width: fit-content;
+    margin: auto;
+    transition: var(--transition);
 }
 
-.App-link {
-  color: #61dafb;
+tbody .box {
+    width: 55px;
+    height: 55px;
+    font-size: 20px;
+    text-align: center;
+    border: 1px solid var(--dark-green);
+    background-color: var(--light);
+    color: var(--dark-green);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: var(--transition);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+tbody .box.active {
+    background-color: var(--green);
+}
+
+.bingo {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.Bingo__Text {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    display: grid;
+    place-items: center;
+    border: 2px solid var(--dark-green);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.Bingo__Text.active {
+    background: var(--green);
+}
+
+.controls {
+    margin: 15px auto;
+    display: flex;
+    gap: 10px;
+}
+
+@media screen and (max-width:300px) {
+
+    tbody .box,
+    .Bingo__Text {
+        width: 45px;
+        height: 45px;
+    }
+
+    .controls {
+        display: grid;
+    }
 }
