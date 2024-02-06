@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Bingo-Game/static/css/main.de0b44cf.css",
+    "main.js": "/Bingo-Game/static/js/main.1da2a93b.js",
+    "index.html": "/Bingo-Game/index.html",
+    "main.de0b44cf.css.map": "/Bingo-Game/static/css/main.de0b44cf.css.map",
+    "main.1da2a93b.js.map": "/Bingo-Game/static/js/main.1da2a93b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.de0b44cf.css",
+    "static/js/main.1da2a93b.js"
+  ]
+}
